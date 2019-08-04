@@ -1,7 +1,7 @@
 {
   "name": "expr-eval-sandbox",
   "version": "1.0.0",
-  "description": "Sandbox for JavaScript Mathematical Expression Evaluator",
+  "description": "Sandbox for Mathematical Expression Evaluator",
   "license": "MIT",
   "scripts": {
     "postinstall": "cp node_modules/expr-eval/dist/bundle.js expr-eval.js",

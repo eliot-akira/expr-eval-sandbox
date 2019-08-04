@@ -1,4 +1,4 @@
-# Expression Evaluator Sandbox
+# Sandbox for Mathematical Expression Evaluator
 
 This is a simple web page to explore the [Mathematical Expression Evaluator](https://github.com/silentmatt/expr-eval). See it in action [here](https://eliot-akira.github.io/expr-eval-sandbox).
 
