@@ -1,0 +1,40 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 8px; }
+#expreval h1 { font-size: 20px; }
+#expreval .expreval-textarea {
+  width: 100%;
+  margin-top: 4px;
+  padding: 4px;
+}
+#expreval .expreval-results {
+  margin-left: -4px;
+  margin-right: -4px;
+}
+#expreval .expreval-results:before,
+#expreval .expreval-results:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+#expreval .expreval-tokens,
+#expreval .expreval-parsed,
+#expreval .expreval-result {
+  float: left;
+  width: 33.333%;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+#expreval pre {
+  margin: 0;
+  padding: 0;
+}
+#expreval code {
+  display: block;
+  padding: 4px;
+  background-color: #f3f3f3;
+  min-height: 120px;
+  white-space: pre-wrap;
+}
+#expreval .expreval-action {
+  margin: 8px 0;
+}

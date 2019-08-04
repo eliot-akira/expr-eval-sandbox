@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mathematical Expression Evaluator</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body id="expreval">
+
+  <h1>Mathematical Expression Evaluator</h1>
+
+  <small>Expression</small>
+  <textarea class="expreval-textarea" rows="4"></textarea>
+
+  <button class="expreval-action expreval-action-run" type="button">Evaluate</button>
+
+  <div class="expreval-results">
+    <div class="expreval-tokens">
+      <small>Tokens</small>
+      <pre><code></code></pre>
+    </div>
+    <div class="expreval-parsed">
+      <small>Parsed</small>
+      <pre><code></code></pre>
+    </div>
+    <div class="expreval-result">
+      <small>Result</small>
+      <pre><code></code></pre>
+    </div>
+  </div>
+
+  <script src="expr-eval.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
