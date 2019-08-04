@@ -1,5 +1,6 @@
 * { box-sizing: border-box; }
 body { margin: 0; padding: 8px; }
+#expreval { max-width: 1024px; }
 #expreval h1 { font-size: 20px; }
 #expreval .expreval-textarea {
   width: 100%;
