@@ -33,6 +33,8 @@ var parser = new Parser({
 
 var scope = {}
 
+textareaEl.focus()
+
 runActionEl.addEventListener('click', function() {
   let parsed
   try {
