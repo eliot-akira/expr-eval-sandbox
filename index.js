@@ -36,6 +36,7 @@ var scope = {}
 textareaEl.focus()
 
 runActionEl.addEventListener('click', function() {
+  textareaEl.focus()
   let parsed
   try {
     parsed = parser.parse(textareaEl.value, scope)
