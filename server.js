@@ -10,6 +10,8 @@ const mimeTypes = {
 }
 const port = 3000
 const baseURL = `http://localhost:${port}`
+const args = process.argv.slice(2)
+const libFilePath = args[0]
 
 const notFound = function (res) {
   res.writeHead(404, { 'Content-Type': 'text/plain' })
@@ -20,7 +22,12 @@ const notFound = function (res) {
 const handler = function (req, res) {
 
   const { pathname } = new URL(req.url, baseURL)
-  let filename = path.join(process.cwd(), unescape(pathname))
+  const useLibFilePath = pathname==='/expr-eval.js' && libFilePath
+
+  let filename = useLibFilePath
+    ? libFilePath
+    : path.join(process.cwd(), unescape(pathname))
+  let getExtension = f => path.extname(f).slice(1)
   let stats
 
   try {
@@ -43,10 +50,8 @@ const handler = function (req, res) {
     }
   }
 
-  const fileExtension = path.extname(filename).slice(1)
-
   if (stats.isFile()) {
-    const mimeType = mimeTypes[fileExtension || 'text']
+    const mimeType = mimeTypes[getExtension(filename) || 'text']
     res.writeHead(200, { 'Content-Type': mimeType })
 
     const fileStream = fs.createReadStream(filename)
